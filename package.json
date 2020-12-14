@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-flexible",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.14.1",
+    "nuxt": "^2.14.6",
+    "vue-echarts": "^3.0.9"
+  },
+  "devDependencies": {
+    "@njleonzhang/postcss-px-to-rem": "^1.0.1",
+    "fibers": "^5.0.0",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^5.1.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
+  }
+}
