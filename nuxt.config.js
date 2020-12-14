@@ -45,8 +45,15 @@ export default {
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {
 		postcss: [
-			// require('postcss-px2rem')({
-			// remUnit: 192,
+			// require('postcss-pxtorem')({
+			// 	rootValue: 16,
+			// 	unitPrecision: 3,
+			// 	propList: ['*'],
+			// 	selectorBlackList: [],
+			// 	replace: true,
+			// 	mediaQuery: false,
+			// 	minPixelValue: 1,
+			// 	// exclude: /node_modules/i,
 			// }),
 			require('@njleonzhang/postcss-px-to-rem')({
 				unitToConvert: 'px',
