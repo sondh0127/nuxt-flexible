@@ -94,7 +94,7 @@
 		<div class="doughnut">
 			<doughnut></doughnut>
 		</div>
-		<div class="point">
+		<!-- <div class="point">
 			<point></point>
 		</div>
 		<div class="line">
@@ -115,7 +115,7 @@
 		</div>
 		<div class="double-line">
 			<double-line></double-line>
-		</div>
+		</div> -->
 	</div>
 </template>
 

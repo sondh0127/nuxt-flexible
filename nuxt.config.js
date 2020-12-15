@@ -1,4 +1,4 @@
-const px2rem = require('postcss-px2rem')
+const path = require('path')
 
 export default {
 	// Global page headers (https://go.nuxtjs.dev/config-head)
@@ -26,8 +26,8 @@ export default {
 
 	// Global CSS (https://go.nuxtjs.dev/config-css)
 	css: [
-		'element-ui/lib/theme-chalk/reset.css',
-		'element-ui/lib/theme-chalk/index.css',
+		// 'element-ui/lib/theme-chalk/reset.css',
+		// 'element-ui/lib/theme-chalk/index.css',
 	],
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -37,32 +37,29 @@ export default {
 	components: false,
 
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-	buildModules: [],
+	buildModules: ['@nuxtjs/tailwindcss'],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
-	modules: [],
+	modules: [
+		// Simple usage
+		'@nuxtjs/localtunnel',
+	],
+	telemetry: false,
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {
-		postcss: [
-			// require('postcss-pxtorem')({
-			// 	rootValue: 16,
-			// 	unitPrecision: 3,
-			// 	propList: ['*'],
-			// 	selectorBlackList: [],
-			// 	replace: true,
-			// 	mediaQuery: false,
-			// 	minPixelValue: 1,
-			// 	// exclude: /node_modules/i,
-			// }),
-			require('@njleonzhang/postcss-px-to-rem')({
-				unitToConvert: 'px',
-				widthOfDesignLayout: 1920, // (Number) The width of the viewport.
-				unitPrecision: 3, // (Number) The decimal numbers to allow the REM units to grow to.
-				selectorBlackList: ['.ignore', '.hairlines'], // (Array) The selectors to ignore and leave as px.
-				minPixelValue: 1, // (Number) Set the minimum pixel value to replace.
-				mediaQuery: false, // (Boolean) Allow px to be converted in media queries.
-			}),
-		],
+		postcss: {
+			plugins: {
+				tailwindcss: path.join(__dirname, 'tailwind.config.js'),
+				'./libs/postcss-px-to-rem': {
+					unitToConvert: 'px',
+					widthOfDesignLayout: 1920, // (Number) The width of the viewport.
+					unitPrecision: 3, // (Number) The decimal numbers to allow the REM units to grow to.
+					selectorBlackList: ['.ignore', '.hairlines'], // (Array) The selectors to ignore and leave as px.
+					minPixelValue: 1, // (Number) Set the minimum pixel value to replace.
+					mediaQuery: false, // (Boolean) Allow px to be converted in media queries.
+				},
+			},
+		},
 	},
 }

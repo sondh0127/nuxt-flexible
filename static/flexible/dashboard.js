@@ -8,7 +8,7 @@ function initFlexible(screenRatioByDesign = 16 / 9) {
 				? screenRatioByDesign / screenRatio
 				: 1) *
 				docEle.clientWidth) /
-			10
+			100
 
 		docEle.style.fontSize = fontSize.toFixed(3) + 'px'
 	}

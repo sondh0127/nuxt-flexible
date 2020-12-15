@@ -9,11 +9,11 @@ export default {
 			options: {
 				title: {
 					textStyle: {
-						fontSize: 14,
+						fontSize: 16,
 						color: '#fff',
 					},
 					subtextStyle: {
-						fontSize: 14,
+						fontSize: 16,
 						color: '#fff',
 					},
 				},
