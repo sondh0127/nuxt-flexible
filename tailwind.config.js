@@ -4,9 +4,6 @@ module.exports = {
 			screens: {
 				portrait: { raw: '(orientation: portrait)' },
 			},
-			spacing: {
-				'100vh': '100vh',
-			},
 		},
 	},
 	variants: {

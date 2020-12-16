@@ -18,7 +18,7 @@ export default {
 		// ],
 		script: [
 			{
-				src: '/flexible/dashboard.js',
+				src: '/flexible/lib-flexible.js',
 				type: 'text/javascript',
 			},
 		],
@@ -40,10 +40,7 @@ export default {
 	buildModules: ['@nuxtjs/tailwindcss'],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
-	modules: [
-		// Simple usage
-		'@nuxtjs/localtunnel',
-	],
+	modules: [],
 	telemetry: false,
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
